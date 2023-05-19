@@ -1,5 +1,7 @@
 package ru.netology.javaqa;
 
+import java.util.Objects;
+
 public class Product {
     protected int id;
     protected String title;
@@ -25,6 +27,24 @@ public class Product {
         return Objects.hash(id, title, price);
     }
 
-    // геттеры + сеттеры
-    // на id только геттер — пусть будет неизменяемым для товара
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
 }
